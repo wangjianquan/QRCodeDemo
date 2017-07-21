@@ -24,7 +24,7 @@ class QRCodeCreateViewController: UIViewController {
         cortainerView.layer.masksToBounds = true
 
         
-        avatorImage.image = UIImage(named: "qrcode_tabbar_icon_qrcode_highlighted")
+        avatorImage.image = UIImage(named: "IMG_2043.jpg")
         avatorImage.contentMode = UIViewContentMode.scaleAspectFill
 
         //1. 创建滤镜
@@ -34,7 +34,7 @@ class QRCodeCreateViewController: UIViewController {
         filter?.setDefaults()
         
         //3. 设置需要生成二维码的数据到滤镜中
-         filter?.setValue("曾经拥有9527".data(using: String.Encoding.utf8), forKeyPath: "InputMessage")
+         filter?.setValue("https://github.com/wangjianquan".data(using: String.Encoding.utf8), forKeyPath: "InputMessage")
         //4. 从滤镜中取出生成好的二维码图片
          guard  let ciimage = filter?.outputImage else {
                 return
